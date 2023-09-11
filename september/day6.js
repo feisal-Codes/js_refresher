@@ -163,16 +163,27 @@ function unshift(array, ...elements){
 
 let numbers=[1,2,3,4,5,6,7,8,9]
 // console.log(numbers[numbers.length])
-console.log(unshift(numbers, 30,3,4,-1))
+// console.log(unshift(numbers, 30,3,4,-1))
 
 /**
 arrays methods:
 push-add an element to the end
 unshift- add an element at the start
+shift- remove element from begining of an array
 */
 
+function shift(array){
+  const lst=array[array.length-1]
+  for(let i=0; i < array.length-1; i++){
+    array[i]=array[i+1]
+   }
+  array.length-=1
+  return array
+}
 
+//1,2,3 4 5 6 7 8 9
 
+console.log(shift(numbers))
 
 
 
