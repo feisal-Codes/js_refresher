@@ -181,9 +181,14 @@ function shift(array){
   return array
 }
 
+function shift_spread(array){
+  let arr=[ist, ...rest]= array
+  return [...rest]
+}
+
 //1,2,3 4 5 6 7 8 9
 
-console.log(shift(numbers))
+// console.log(shift(numbers))
 
 
 
