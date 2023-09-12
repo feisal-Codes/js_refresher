@@ -206,10 +206,11 @@ function shift_spread(array){
 //bubble sort
 function sort(array){
 let swapped=true
+  let length= array.length
   while(swapped){
     swapped=false
   
- for(let i=0; i<array.length; i++){
+ for(let i=0; i<length; i++){
    if(array[i+1]<array[i]){
      let temp=array[i+1]
      array[i+1]=array[i]
@@ -218,15 +219,24 @@ let swapped=true
 
    }
    
+   
  }
+    if(!swapped){
+      break
+    }
+
+    length--
 
   }
   
   return array
 }
 
+//[1,4,2,1,3,5,2]
+//[1,2,4,1,3,5,2]
 
-console.log(sort([4,5,1,7,3]))
+
+console.log(sort([5,2,9,3,6]))
 //4 n 5
 //5 n 1 = 4,1,5
 // 7 n 3 = 4,1,5,3,7
