@@ -186,10 +186,51 @@ function shift_spread(array){
   return [...rest]
 }
 
-//1,2,3 4 5 6 7 8 9
+//[1,2,3,4,5,6]
 
+
+// console.log(slice([1,2,3,4,5,6],3))
+
+//1,2,3 4 5 6 7 8 9
+// console.log(Math.min(-5,0))
 // console.log(shift(numbers))
 
+//sort a given array
+//input => [2,4,1,7,3,5]
+//output= > [1,2,3,4,5,7]
+//4,5,3,1,7,3,5
+  //4,3,1,5,3,5,7
+  //4,1,5,3,3,5,7
+  //1,4,3,3,5,5,7
+  //1,3,3,4,5,5,7
+//bubble sort
+function sort(array){
+let swapped=true
+  while(swapped){
+    swapped=false
+  
+ for(let i=0; i<array.length; i++){
+   if(array[i+1]<array[i]){
+     let temp=array[i+1]
+     array[i+1]=array[i]
+     array[i] = temp
+     swapped=true
+
+   }
+   
+ }
+
+  }
+  
+  return array
+}
+
+
+console.log(sort([4,5,1,7,3]))
+//4 n 5
+//5 n 1 = 4,1,5
+// 7 n 3 = 4,1,5,3,7
+//1,4,3,
 
 
 
